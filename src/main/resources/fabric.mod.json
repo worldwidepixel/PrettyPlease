@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "pretty-please",
+	"version": "${version}",
+	"name": "Pretty, Please!",
+	"description": "Beautifully breezy building blocks",
+	"authors": ["lynndova"],
+	"contact": {
+		"repo": "https://github.com/worldwidepixel/PrettyPlease",
+		"issues": "https://github.com/worldwidepixel/PrettyPlease/issues"
+	},
+	"license": "ARR",
+	"icon": "assets/template/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.lynndova.pretty.PrettyPleaseClient"
+		],
+		"main": [
+			"com.lynndova.pretty.PrettyPlease"
+		]
+	},
+	"mixins": [
+		"pretty.mixins.json",
+		{
+			"config": "pretty.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~26.1.2",
+		"fabric-api": "*",
+		"java": ">=25"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/bGCrKXqq5N",
+				"modmenu.github_releases": "https://github.com/worldwidepixel/pretty-please/releases",
+				"modmenu.modrinth": "https://modrinth.com/mod/pretty-please"
+			}
+		}
+	}
+}
