@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "pretty-please",
+	"id": "${mod_id}",
 	"version": "${version}",
-	"name": "Pretty, Please!",
+	"name": "${name}",
 	"description": "Beautifully breezy building blocks",
 	"authors": ["lynndova"],
 	"contact": {
@@ -10,11 +10,14 @@
 		"issues": "https://github.com/worldwidepixel/PrettyPlease/issues"
 	},
 	"license": "ARR",
-	"icon": "assets/template/icon.png",
+	"icon": "assets/pretty/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"client": [
 			"com.lynndova.pretty.PrettyPleaseClient"
+		],
+		"fabric-datagen": [
+			"com.lynndova.pretty.datagen.PrettyPleaseDatagen"
 		],
 		"main": [
 			"com.lynndova.pretty.PrettyPlease"

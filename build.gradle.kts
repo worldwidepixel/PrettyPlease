@@ -6,9 +6,10 @@ plugins {
 }
 
 val modVersion = "1.0.0"
-val modId = "pretty-please"
+val modId = "pretty"
 val modName = "Pretty, Please!"
 
+val surpriseProject = "pretty-please@lynndova.com"
 val modrinthProject = "pretty-please"
 val modrinthProjectId = "Np0LyuJw"
 val githubRepository = "worldwidepixel/PrettyPlease"
@@ -58,6 +59,12 @@ loom {
 	}
 }
 
+fabricApi {
+	configureDataGeneration() {
+		client = true
+	}
+}
+
 dependencies {
 	minecraft(libs.minecraft)
 
@@ -67,6 +74,8 @@ dependencies {
 
 tasks.processResources {
 	val map = mapOf(
+		"mod_id" to modId,
+		"name" to modName,
 		"version" to modVersion,
 		"loader_version" to libs.versions.fabric.loader.get()
 	)

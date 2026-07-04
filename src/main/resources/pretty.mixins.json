@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "dev.spiritstudios.template.mixin",
+	"package": "com.lynndova.pretty.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 	],
