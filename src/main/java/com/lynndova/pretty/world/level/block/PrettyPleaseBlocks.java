@@ -51,8 +51,8 @@ public class PrettyPleaseBlocks {
 		BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)
 	);
 	public static final Block ANDESITE_BRICK_STAIRS = registerStairsOf("andesite_brick_stairs", ANDESITE_BRICKS);
-	public static final Block ANDESITE_BRICK_SLAB = registerStairsOf("andesite_brick_slab", ANDESITE_BRICKS);
-	public static final Block ANDESITE_BRICK_WALL = registerStairsOf("andesite_brick_wall", ANDESITE_BRICKS);
+	public static final Block ANDESITE_BRICK_SLAB = registerSlabOf("andesite_brick_slab", ANDESITE_BRICKS);
+	public static final Block ANDESITE_BRICK_WALL = registerWallOf("andesite_brick_wall", ANDESITE_BRICKS);
 
 	public static final Block DIORITE_BRICKS = register(
 		"diorite_bricks",
@@ -60,8 +60,8 @@ public class PrettyPleaseBlocks {
 		BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)
 	);
 	public static final Block DIORITE_BRICK_STAIRS = registerStairsOf("diorite_brick_stairs", DIORITE_BRICKS);
-	public static final Block DIORITE_BRICK_SLAB = registerStairsOf("diorite_brick_slab", DIORITE_BRICKS);
-	public static final Block DIORITE_BRICK_WALL = registerStairsOf("diorite_brick_wall", DIORITE_BRICKS);
+	public static final Block DIORITE_BRICK_SLAB = registerSlabOf("diorite_brick_slab", DIORITE_BRICKS);
+	public static final Block DIORITE_BRICK_WALL = registerWallOf("diorite_brick_wall", DIORITE_BRICKS);
 
 	public static final Block GRANITE_BRICKS = register(
 		"granite_bricks",
@@ -69,8 +69,8 @@ public class PrettyPleaseBlocks {
 		BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)
 	);
 	public static final Block GRANITE_BRICK_STAIRS = registerStairsOf("granite_brick_stairs", GRANITE_BRICKS);
-	public static final Block GRANITE_BRICK_SLAB = registerStairsOf("granite_brick_slab", GRANITE_BRICKS);
-	public static final Block GRANITE_BRICK_WALL = registerStairsOf("granite_brick_wall", GRANITE_BRICKS);
+	public static final Block GRANITE_BRICK_SLAB = registerSlabOf("granite_brick_slab", GRANITE_BRICKS);
+	public static final Block GRANITE_BRICK_WALL = registerWallOf("granite_brick_wall", GRANITE_BRICKS);
 	// endregion
 
 	// region lovely boilerplate
