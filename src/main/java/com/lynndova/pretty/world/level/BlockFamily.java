@@ -36,20 +36,22 @@ public class BlockFamily {
 		return this.creativeModeTabEntries;
 	}
 
-	public BlockFamily add(Block block, MemberType type, HashMap<String, String> translationOverrides) {
+	public BlockFamily add(Block block, MemberType type, MemberLootType lootType, HashMap<String, String> translationOverrides) {
 		members.add(new Member(
 			block,
 			type,
-			translationOverrides
+			translationOverrides,
+			lootType
 		));
 		return this;
 	}
 
-	public BlockFamily add(Block block, MemberType type) {
+	public BlockFamily add(Block block, MemberType type, MemberLootType lootType) {
 		members.add(new Member(
 			block,
 			type,
-			new StringMapMaker().cartographiate()
+			new StringMapMaker().cartographiate(),
+			lootType
 		));
 		return this;
 	}
@@ -66,7 +68,13 @@ public class BlockFamily {
 
 	public record CreativeModeTabEntry(ResourceKey<CreativeModeTab> tab, Optional<Item> insertAfter) { }
 
-	public record Member(Block block, MemberType type, HashMap<String, String> translationOverrides) { }
+	public record Member(Block block, MemberType type, HashMap<String, String> translationOverrides, MemberLootType lootType) { }
+
+	public enum MemberLootType {
+		SELF,
+		SILK_TOUCH_ONLY,
+		NOTHING
+	}
 
 	public enum MemberType {
 		BASE(),
