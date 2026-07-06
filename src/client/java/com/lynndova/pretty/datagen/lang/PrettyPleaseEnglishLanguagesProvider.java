@@ -18,6 +18,7 @@ public class PrettyPleaseEnglishLanguagesProvider {
 		@Override
 		public void generateTranslations(HolderLookup.@NonNull Provider holderLookup, @NonNull TranslationBuilder translationBuilder) {
 			PrettyPleaseBlocks.ALL_FAMILIES.forEach(family -> generateFamilyTranslations(family, translationBuilder));
+			translationBuilder.add("itemGroup.prettyPleaseDebug", "Pretty, Please! Debug");
 		}
 	}
 }

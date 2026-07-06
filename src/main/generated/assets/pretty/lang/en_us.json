@@ -22,5 +22,6 @@
   "block.pretty.sandstone_tile_slab": "Sandstone Tile Slab",
   "block.pretty.sandstone_tile_stairs": "Sandstone Tile Stairs",
   "block.pretty.sandstone_tile_wall": "Sandstone Tile Wall",
-  "block.pretty.sandstone_tiles": "Sandstone Tiles"
+  "block.pretty.sandstone_tiles": "Sandstone Tiles",
+  "itemGroup.prettyPleaseDebug": "Pretty, Please! Debug"
 }
