@@ -16,5 +16,7 @@ public class PrettyPleaseDatagen implements DataGeneratorEntrypoint {
 		pack.addProvider(PrettyPleaseEnglishLanguagesProvider.UnitedStatesProvider::new); // en_us
 		// loot tables
 		pack.addProvider(PrettyPleaseBlockLootTableProvider::new);
+		// block tags
+		pack.addProvider(PrettyPleaseBlockTagProvider::new);
 	}
 }

@@ -1,7 +1,6 @@
 package com.lynndova.pretty.world.level.block;
 
 import com.lynndova.pretty.PrettyPlease;
-import com.lynndova.pretty.world.level.BlockFamily;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -11,8 +10,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -27,25 +24,6 @@ public class PrettyPleaseBlocks {
 	public static final Block PRISMARINE_TILE_SLAB = registerSlabOf("prismarine_tile_slab", PRISMARINE_TILES);
 	public static final Block PRISMARINE_TILE_WALL = registerWallOf("prismarine_tile_wall", PRISMARINE_TILES);
 
-	public static final BlockFamily PRISMARINE_TILE_FAMILY = new BlockFamily(
-		PRISMARINE_TILES,
-		new BlockFamily.StringMapMaker()
-			.add("en_us", "Prismarine Tile %s")
-			.cartographiate()
-	)
-		.add(
-			PRISMARINE_TILES,
-			BlockFamily.MemberType.BASE,
-			BlockFamily.MemberLootType.SELF,
-			new BlockFamily.StringMapMaker()
-				.add("en_us", "Prismarine Tiles")
-				.cartographiate()
-		)
-		.add(PRISMARINE_TILE_STAIRS, BlockFamily.MemberType.STAIRS, BlockFamily.MemberLootType.SELF)
-		.add(PRISMARINE_TILE_SLAB, BlockFamily.MemberType.SLAB, BlockFamily.MemberLootType.SELF)
-		.add(PRISMARINE_TILE_WALL, BlockFamily.MemberType.WALL, BlockFamily.MemberLootType.SELF)
-		.addCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, Items.PRISMARINE_BRICK_SLAB);
-
 	public static final Block SANDSTONE_TILES = register(
 		"sandstone_tiles",
 		Block::new,
@@ -54,25 +32,6 @@ public class PrettyPleaseBlocks {
 	public static final Block SANDSTONE_TILE_STAIRS = registerStairsOf("sandstone_tile_stairs", SANDSTONE_TILES);
 	public static final Block SANDSTONE_TILE_SLAB = registerSlabOf("sandstone_tile_slab", SANDSTONE_TILES);
 	public static final Block SANDSTONE_TILE_WALL = registerWallOf("sandstone_tile_wall", SANDSTONE_TILES);
-
-	public static final BlockFamily SANDSTONE_TILE_FAMILY = new BlockFamily(
-		SANDSTONE_TILES,
-		new BlockFamily.StringMapMaker()
-			.add("en_us", "Sandstone Tile %s")
-			.cartographiate()
-	)
-		.add(
-			SANDSTONE_TILES,
-			BlockFamily.MemberType.BASE,
-			BlockFamily.MemberLootType.SELF,
-			new BlockFamily.StringMapMaker()
-				.add("en_us", "Sandstone Tiles")
-				.cartographiate()
-		)
-		.add(SANDSTONE_TILE_STAIRS, BlockFamily.MemberType.STAIRS, BlockFamily.MemberLootType.SELF)
-		.add(SANDSTONE_TILE_SLAB, BlockFamily.MemberType.SLAB, BlockFamily.MemberLootType.SELF)
-		.add(SANDSTONE_TILE_WALL, BlockFamily.MemberType.WALL, BlockFamily.MemberLootType.SELF)
-		.addCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, Items.CUT_STANDSTONE_SLAB);
 
 	public static final Block RED_SANDSTONE_TILES = register(
 		"red_sandstone_tiles",
@@ -83,24 +42,6 @@ public class PrettyPleaseBlocks {
 	public static final Block RED_SANDSTONE_TILE_SLAB = registerSlabOf("red_sandstone_tile_slab", RED_SANDSTONE_TILES);
 	public static final Block RED_SANDSTONE_TILE_WALL = registerWallOf("red_sandstone_tile_wall", RED_SANDSTONE_TILES);
 
-	public static final BlockFamily RED_SANDSTONE_TILE_FAMILY = new BlockFamily(
-		RED_SANDSTONE_TILES,
-		new BlockFamily.StringMapMaker()
-			.add("en_us", "Red Sandstone Tile %s")
-			.cartographiate()
-	)
-		.add(
-			RED_SANDSTONE_TILES,
-			BlockFamily.MemberType.BASE,
-			BlockFamily.MemberLootType.SELF,
-			new BlockFamily.StringMapMaker()
-				.add("en_us", "Red Sandstone Tiles")
-				.cartographiate()
-		)
-		.add(RED_SANDSTONE_TILE_STAIRS, BlockFamily.MemberType.STAIRS, BlockFamily.MemberLootType.SELF)
-		.add(RED_SANDSTONE_TILE_SLAB, BlockFamily.MemberType.SLAB, BlockFamily.MemberLootType.SELF)
-		.add(RED_SANDSTONE_TILE_WALL, BlockFamily.MemberType.WALL, BlockFamily.MemberLootType.SELF)
-		.addCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, Items.CUT_RED_SANDSTONE_SLAB);
 	// endregion
 
 	// region bricks
@@ -113,25 +54,6 @@ public class PrettyPleaseBlocks {
 	public static final Block ANDESITE_BRICK_SLAB = registerSlabOf("andesite_brick_slab", ANDESITE_BRICKS);
 	public static final Block ANDESITE_BRICK_WALL = registerWallOf("andesite_brick_wall", ANDESITE_BRICKS);
 
-	public static final BlockFamily ANDESITE_BRICK_FAMILY = new BlockFamily(
-		ANDESITE_BRICKS,
-		new BlockFamily.StringMapMaker()
-			.add("en_us", "Andesite Brick %s")
-			.cartographiate()
-	)
-		.add(
-			ANDESITE_BRICKS,
-			BlockFamily.MemberType.BASE,
-			BlockFamily.MemberLootType.SELF,
-			new BlockFamily.StringMapMaker()
-				.add("en_us", "Andesite Bricks")
-				.cartographiate()
-		)
-		.add(ANDESITE_BRICK_STAIRS, BlockFamily.MemberType.STAIRS, BlockFamily.MemberLootType.SELF)
-		.add(ANDESITE_BRICK_SLAB, BlockFamily.MemberType.SLAB, BlockFamily.MemberLootType.SELF)
-		.add(ANDESITE_BRICK_WALL, BlockFamily.MemberType.WALL, BlockFamily.MemberLootType.SELF)
-		.addCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, Items.POLISHED_ANDESITE_SLAB);
-
 	public static final Block DIORITE_BRICKS = register(
 		"diorite_bricks",
 		Block::new,
@@ -140,25 +62,6 @@ public class PrettyPleaseBlocks {
 	public static final Block DIORITE_BRICK_STAIRS = registerStairsOf("diorite_brick_stairs", DIORITE_BRICKS);
 	public static final Block DIORITE_BRICK_SLAB = registerSlabOf("diorite_brick_slab", DIORITE_BRICKS);
 	public static final Block DIORITE_BRICK_WALL = registerWallOf("diorite_brick_wall", DIORITE_BRICKS);
-
-	public static final BlockFamily DIORITE_BRICK_FAMILY = new BlockFamily(
-		DIORITE_BRICKS,
-		new BlockFamily.StringMapMaker()
-			.add("en_us", "Diorite Brick %s")
-			.cartographiate()
-	)
-		.add(
-			DIORITE_BRICKS,
-			BlockFamily.MemberType.BASE,
-			BlockFamily.MemberLootType.SELF,
-			new BlockFamily.StringMapMaker()
-				.add("en_us", "Diorite Bricks")
-				.cartographiate()
-		)
-		.add(DIORITE_BRICK_STAIRS, BlockFamily.MemberType.STAIRS, BlockFamily.MemberLootType.SELF)
-		.add(DIORITE_BRICK_SLAB, BlockFamily.MemberType.SLAB, BlockFamily.MemberLootType.SELF)
-		.add(DIORITE_BRICK_WALL, BlockFamily.MemberType.WALL, BlockFamily.MemberLootType.SELF)
-		.addCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, Items.POLISHED_DIORITE_SLAB);
 
 	public static final Block GRANITE_BRICKS = register(
 		"granite_bricks",
@@ -169,36 +72,7 @@ public class PrettyPleaseBlocks {
 	public static final Block GRANITE_BRICK_SLAB = registerSlabOf("granite_brick_slab", GRANITE_BRICKS);
 	public static final Block GRANITE_BRICK_WALL = registerWallOf("granite_brick_wall", GRANITE_BRICKS);
 
-	public static final BlockFamily GRANITE_BRICK_FAMILY = new BlockFamily(
-		GRANITE_BRICKS,
-		new BlockFamily.StringMapMaker()
-			.add("en_us", "Granite Brick %s")
-			.cartographiate()
-	)
-		.add(
-			GRANITE_BRICKS,
-			BlockFamily.MemberType.BASE,
-			BlockFamily.MemberLootType.SELF,
-			new BlockFamily.StringMapMaker()
-				.add("en_us", "Granite Bricks")
-				.cartographiate()
-		)
-		.add(GRANITE_BRICK_STAIRS, BlockFamily.MemberType.STAIRS, BlockFamily.MemberLootType.SELF)
-		.add(GRANITE_BRICK_SLAB, BlockFamily.MemberType.SLAB, BlockFamily.MemberLootType.SELF)
-		.add(GRANITE_BRICK_WALL, BlockFamily.MemberType.WALL, BlockFamily.MemberLootType.SELF)
-		.addCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, Items.POLISHED_GRANITE_SLAB);
 	// endregion
-
-	public static final List<BlockFamily> ALL_FAMILIES = Arrays.asList(
-		// tiles
-		PRISMARINE_TILE_FAMILY,
-		SANDSTONE_TILE_FAMILY,
-		RED_SANDSTONE_TILE_FAMILY,
-		// bricks
-		ANDESITE_BRICK_FAMILY,
-		DIORITE_BRICK_FAMILY,
-		GRANITE_BRICK_FAMILY
-	);
 
 	// region lovely boilerplate
 	public static <T extends Block> T register(ResourceKey<Block> key, Function<BlockBehaviour.Properties, T> factory, BlockBehaviour.Properties settings, @Nullable BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemConstructor) {

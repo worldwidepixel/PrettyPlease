@@ -1,6 +1,7 @@
 package com.lynndova.pretty.world.level;
 
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,6 +15,7 @@ public class BlockFamily {
 	private final HashMap<String, String> childrenSlotTranslations;
 	private final ArrayList<Member> members = new ArrayList<>();
 	private final ArrayList<CreativeModeTabEntry> creativeModeTabEntries = new ArrayList<>();
+	private final ArrayList<TagKey<Block>> familyTags = new ArrayList<>();
 
 	public BlockFamily(Block base, HashMap<String, String> childrenSlotTranslations) {
 		this.base = base;
@@ -35,6 +37,8 @@ public class BlockFamily {
 	public ArrayList<CreativeModeTabEntry> getCreativeModeTabs() {
 		return this.creativeModeTabEntries;
 	}
+
+	public ArrayList<TagKey<Block>> getFamilyTags() { return this.familyTags; }
 
 	public BlockFamily add(Block block, MemberType type, MemberLootType lootType, HashMap<String, String> translationOverrides) {
 		members.add(new Member(
@@ -63,6 +67,11 @@ public class BlockFamily {
 
 	public BlockFamily addCreativeTab(ResourceKey<CreativeModeTab> tab, Item insertAfter) {
 		creativeModeTabEntries.add(new CreativeModeTabEntry(tab, Optional.of(insertAfter)));
+		return this;
+	}
+
+	public BlockFamily addFamilyTag(TagKey<Block> tag) {
+		this.familyTags.add(tag);
 		return this;
 	}
 

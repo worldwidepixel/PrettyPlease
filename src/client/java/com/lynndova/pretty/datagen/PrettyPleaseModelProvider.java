@@ -1,7 +1,7 @@
 package com.lynndova.pretty.datagen;
 
 import com.lynndova.pretty.world.level.BlockFamily;
-import com.lynndova.pretty.world.level.block.PrettyPleaseBlocks;
+import com.lynndova.pretty.world.level.block.PrettyPleaseBlockFamilies;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -16,7 +16,7 @@ public class PrettyPleaseModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(@NonNull BlockModelGenerators blockModelGenerator) {
-		PrettyPleaseBlocks.ALL_FAMILIES.forEach(family -> generateFromFamily(family, blockModelGenerator));
+		PrettyPleaseBlockFamilies.ALL_FAMILIES.forEach(family -> generateFromFamily(family, blockModelGenerator));
 	}
 
 	private void generateFromFamily(BlockFamily family, BlockModelGenerators blockModelGenerator) {

@@ -1,6 +1,6 @@
 package com.lynndova.pretty.datagen;
 
-import com.lynndova.pretty.world.level.block.PrettyPleaseBlocks;
+import com.lynndova.pretty.world.level.block.PrettyPleaseBlockFamilies;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
@@ -14,7 +14,7 @@ public class PrettyPleaseBlockLootTableProvider extends FabricBlockLootSubProvid
 
 	@Override
 	public void generate() {
-		PrettyPleaseBlocks.ALL_FAMILIES.forEach(family -> {
+		PrettyPleaseBlockFamilies.ALL_FAMILIES.forEach(family -> {
 			family.getMembers().forEach(member -> {
 				switch (member.lootType()) {
 					case SELF -> dropSelf(member.block());

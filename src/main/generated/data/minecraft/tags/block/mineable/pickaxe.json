@@ -1,0 +1,28 @@
+{
+  "values": [
+    "pretty:prismarine_tiles",
+    "pretty:prismarine_tile_stairs",
+    "pretty:prismarine_tile_slab",
+    "pretty:prismarine_tile_wall",
+    "pretty:sandstone_tiles",
+    "pretty:sandstone_tile_stairs",
+    "pretty:sandstone_tile_slab",
+    "pretty:sandstone_tile_wall",
+    "pretty:red_sandstone_tiles",
+    "pretty:red_sandstone_tile_stairs",
+    "pretty:red_sandstone_tile_slab",
+    "pretty:red_sandstone_tile_wall",
+    "pretty:andesite_bricks",
+    "pretty:andesite_brick_stairs",
+    "pretty:andesite_brick_slab",
+    "pretty:andesite_brick_wall",
+    "pretty:diorite_bricks",
+    "pretty:diorite_brick_stairs",
+    "pretty:diorite_brick_slab",
+    "pretty:diorite_brick_wall",
+    "pretty:granite_bricks",
+    "pretty:granite_brick_stairs",
+    "pretty:granite_brick_slab",
+    "pretty:granite_brick_wall"
+  ]
+}

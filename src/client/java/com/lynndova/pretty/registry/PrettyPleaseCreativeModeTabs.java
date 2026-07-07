@@ -2,6 +2,7 @@ package com.lynndova.pretty.registry;
 
 import com.lynndova.pretty.PrettyPlease;
 import com.lynndova.pretty.world.level.BlockFamily;
+import com.lynndova.pretty.world.level.block.PrettyPleaseBlockFamilies;
 import com.lynndova.pretty.world.level.block.PrettyPleaseBlocks;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
@@ -25,7 +26,7 @@ public class PrettyPleaseCreativeModeTabs {
 		.icon(() -> new ItemStack(PrettyPleaseBlocks.PRISMARINE_TILE_STAIRS))
 		.title(Component.translatable("itemGroup.prettyPleaseDebug"))
 		.displayItems((params, output) -> {
-			PrettyPleaseBlocks.ALL_FAMILIES.forEach(family -> {
+			PrettyPleaseBlockFamilies.ALL_FAMILIES.forEach(family -> {
 				family.getMembers().forEach(member -> output.accept(member.block()));
 			});
 		})
@@ -34,7 +35,7 @@ public class PrettyPleaseCreativeModeTabs {
 	public static void init() {
 		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS)
 			.register((tab) -> {
-				PrettyPleaseBlocks.ALL_FAMILIES.forEach(family -> addFamilyToTab(family, tab));
+				PrettyPleaseBlockFamilies.ALL_FAMILIES.forEach(family -> addFamilyToTab(family, tab));
 			});
 
 		if (FabricLoader.getInstance().isDevelopmentEnvironment()) {

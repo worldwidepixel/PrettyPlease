@@ -1,6 +1,6 @@
 package com.lynndova.pretty.datagen.lang;
 
-import com.lynndova.pretty.world.level.block.PrettyPleaseBlocks;
+import com.lynndova.pretty.world.level.block.PrettyPleaseBlockFamilies;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.core.HolderLookup;
 import org.jspecify.annotations.NonNull;
@@ -17,7 +17,7 @@ public class PrettyPleaseEnglishLanguagesProvider {
 
 		@Override
 		public void generateTranslations(HolderLookup.@NonNull Provider holderLookup, @NonNull TranslationBuilder translationBuilder) {
-			PrettyPleaseBlocks.ALL_FAMILIES.forEach(family -> generateFamilyTranslations(family, translationBuilder));
+			PrettyPleaseBlockFamilies.ALL_FAMILIES.forEach(family -> generateFamilyTranslations(family, translationBuilder));
 			translationBuilder.add("itemGroup.prettyPleaseDebug", "Pretty, Please! Debug");
 		}
 	}
