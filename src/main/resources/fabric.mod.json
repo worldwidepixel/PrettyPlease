@@ -6,7 +6,7 @@
 	"description": "Beautifully breezy building blocks",
 	"authors": ["lynndova"],
 	"contact": {
-		"source": "https://github.com/worldwidepixel/PrettyPlease",
+		"sources": "https://github.com/worldwidepixel/PrettyPlease",
 		"issues": "https://github.com/worldwidepixel/PrettyPlease/issues"
 	},
 	"license": "ARR",
